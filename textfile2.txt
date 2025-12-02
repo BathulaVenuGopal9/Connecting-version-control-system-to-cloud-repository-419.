@@ -1,0 +1,80 @@
+Getting Started with Git & GitHub
+
+A beginner-friendly guide to connect your local system to a GitHub repository
+
+Version control is essential for managing project changes efficiently. This guide explains how to set up Git, initialize a local repository, and push files to a GitHub repository using standard Git commands.
+
+# Understanding the Four Stages of Git
+
+Git works through the following stages:
+
+Working Directory – Where you create and modify files
+
+Staging Area – Files selected/prepared for commit
+
+Commit Area (Local Repository) – Snapshot of your staged files
+
+Remote Repository – GitHub (cloud storage for your code)
+
+# Step 1 — Install Git
+
+Download and install Git for Windows:
+# https://git-scm.com/install/windows
+
+# Step 2 — Create a Local Repository
+
+Create a folder (example: git_github)
+
+Right-click inside the folder → Open Git Bash Here
+
+Enable viewing hidden items to check the .git folder later
+
+# Step 3 — Configure Git (One-time Setup)
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+git config --list
+
+# Step 4 — Initialize Git & Add Files
+git init
+git status
+
+Create a new file
+
+Create newfile.txt inside your folder, then run:
+
+git add newfile.txt
+git status
+git commit -m "Added newfile.txt"
+
+Modify & add more files
+
+Update newfile.txt
+
+Create another file: textfile2.txt
+
+Add and commit both together:
+
+git add .
+git commit -m "Updated newfile.txt and added textfile2.txt"
+git log
+
+# Step 5 — Connect Local Repo to GitHub
+
+Before running these commands:
+
+## Login to GitHub
+## Create a new repository
+## Copy the HTTPS URL of the repo
+
+Then connect:
+
+git remote add origin <your-repo-link>
+git branch -M main
+git push -u origin main
+
+# Result
+
+Your files (newfile.txt and textfile2.txt) are now uploaded to GitHub without manually uploading anything.
+Everything was pushed through Git's virtual connection between your local system and GitHub.
+
+## Thank You!
