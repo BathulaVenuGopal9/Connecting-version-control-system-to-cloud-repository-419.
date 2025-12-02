@@ -1,1 +1,42 @@
-This is the first session on git .
+# This is the first session on git .
+
+Git code to connect local server which is version control system to cloud repository.
+
+There are total four stages:
+a) Working Directory
+b) Staging Area
+c) Commiting Area
+d) Remote Location
+
+Install git from "https://git-scm.com/install/windows"
+
+# step-1
+Create a local folder naming git_github as per user 
+Using right click inside the folder click on "open git bash here"
+To locate the file click on view and select hidden items option to view .git folder
+After opening the git code window follow the below code lines to connect local server with github
+
+git config --global user.name "name"  --->(# name as per user request)
+git config --global user.email"email" --->(# email as per user request)
+git config --list
+git init
+git status
+git add newfile.txt ---->( Before this step create new text file in git_github)
+git status
+git commit -m "adding newfile.txt" --->(After this step write some message in newfile text and save it )
+git status ---->(Now create new text file as textfile2 because as we have done commit already once now we will check for commit for two updates at a time)
+git add .
+git commit -m "modified new file.txt and created textfile2.txt"
+git log
+
+#step-3
+git remote add origin "Repo line"---->( Before doing this step connect open github just create new repository with a file if necessary add descrption and commit    changes then in the file upload folder scroll down and we can locate git remote repo link option just copy paste that in git code window)
+git branch -M main
+git push -u origin main
+
+#step-3
+now the two files newfile.txt and textfile2.txt was added to the repository with out directly uploading the files this is done through virtually connecting git and github
+
+
+## Thank You##
+
